@@ -1,0 +1,21 @@
+models:
+  - name: dim_produto
+    description: Dimensão de Produto da database da Adventure Works
+    columns:
+        - name: UID_PRODUTO
+          description: Código único (chave primária) do Produto
+          tests:
+            - unique
+            - not_null
+
+        - name: DES_PRODUTO
+          description: Descrição do produto
+
+        - name: COD_PRODUTO
+          description: Código do produto
+
+        - name: NOM_SUBCATEGORIA
+          description: Subcategoria do produto
+
+        - name: NOM_CATEGORIA
+          description: Categoria do produto
