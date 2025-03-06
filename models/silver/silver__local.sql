@@ -16,12 +16,12 @@ with
 
     , silver_local as (
         select
-            cast(endereco.UID_ENDERECO as int)                                            as UID_ENDERECO
-            , cast(endereco.DES_ENDERECO || ' - ' || DES_COMPLEMENTO_ENDERECO as string)  as DES_ENDERECO
-            , cast(endereco.NOM_CIDADE as string)                                         as NOM_CIDADE
-            , cast(estado.NOM_ESTADO as string)                                           as NOM_ESTADO
-            , cast(estado.SIG_ESTADO as string)                                           as SIG_ESTADO
-            , cast(pais.NOM_PAIS as string)                                               as NOM_PAIS
+            endereco.UID_ENDERECO                                         as UID_ENDERECO
+            , endereco.DES_ENDERECO || ' - ' || DES_COMPLEMENTO_ENDERECO  as DES_ENDERECO
+            , endereco.NOM_CIDADE                                         as NOM_CIDADE
+            , estado.NOM_ESTADO                                           as NOM_ESTADO
+            , estado.SIG_ESTADO                                           as SIG_ESTADO
+            , pais.NOM_PAIS                                               as NOM_PAIS
         from endereco
         left join estado on (endereco.UID_ESTADO = estado.UID_ESTADO)
         left join pais   on (estado.UID_PAIS = pais.UID_PAIS)

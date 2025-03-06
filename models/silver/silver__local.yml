@@ -1,5 +1,5 @@
 models:
-  - name: int_comercial__prep_local
+  - name: silver__local
     description: Modelo que enriquece os dados de endereço ao adicionar Estado e País
     columns:
         - name: UID_ENDERECO
