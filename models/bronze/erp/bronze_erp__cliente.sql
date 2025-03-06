@@ -1,9 +1,9 @@
 with
     bronze_customer as (
         select
-            cast(CUSTOMERID as int) as UID_CLIENTE
-            , cast(PERSONID as int)   as UID_PESSOA
-            , cast(STOREID as int)    as UID_LOJA
+            cast(CUSTOMERID as int) as ID_CLIENTE
+            , cast(PERSONID as int)   as ID_PESSOA
+            , cast(STOREID as int)    as ID_LOJA
         from {{ source('erp', 'customer') }}
     )
 

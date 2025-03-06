@@ -1,8 +1,8 @@
 with
     bronze_personphone as (
         select
-            cast(BUSINESSENTITYID as int) as UID_PESSOA
-            , cast(PHONENUMBER as string) as NUM_TELEFONE
+            cast(BUSINESSENTITYID as int) as ID_PESSOA
+            , cast(PHONENUMBER as string) as NUMERO_TELEFONE
         from {{ source('erp', 'personphone') }}
     )
 

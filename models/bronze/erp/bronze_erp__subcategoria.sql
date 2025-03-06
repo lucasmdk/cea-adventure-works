@@ -1,9 +1,9 @@
 with
     bronze_productsubcategory as (
         select
-            cast(PRODUCTSUBCATEGORYID as int) as UID_SUBCATEGORIA
-            , cast(PRODUCTCATEGORYID as int)  as UID_CATEGORIA
-            , cast(NAME as string)            as NOM_SUBCATEGORIA
+            cast(PRODUCTSUBCATEGORYID as int) as ID_SUBCATEGORIA
+            , cast(PRODUCTCATEGORYID as int)  as ID_CATEGORIA
+            , cast(NAME as string)            as DESCRICAO_SUBCATEGORIA
         from {{ source('erp', 'productsubcategory') }}
     )
 
