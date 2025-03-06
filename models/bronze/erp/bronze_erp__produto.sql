@@ -1,10 +1,10 @@
 with
     bronze_product as (
         select
-            cast(PRODUCTID as int)              as UID_PRODUTO
-            , cast(PRODUCTSUBCATEGORYID as int) as UID_SUBCATEGORIA
-            , cast(NAME as string)              as DES_PRODUTO
-            , cast(PRODUCTNUMBER as string)     as COD_PRODUTO
+            cast(PRODUCTID as int)              as ID_PRODUTO
+            , cast(PRODUCTSUBCATEGORYID as int) as ID_SUBCATEGORIA
+            , cast(NAME as string)              as DESCRICAO_PRODUTO
+            , cast(PRODUCTNUMBER as string)     as CODIGO_PRODUTO
 
         from {{ source('erp', 'product') }}
     )

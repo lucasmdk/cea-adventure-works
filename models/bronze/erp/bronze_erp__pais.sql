@@ -1,8 +1,8 @@
 with
     bronze_countryregion as (
         select
-            cast(COUNTRYREGIONCODE as string) as UID_PAIS
-            , cast(NAME as string)            as NOM_PAIS
+            cast(COUNTRYREGIONCODE as string) as ID_PAIS
+            , cast(NAME as string)            as NOME_PAIS
         from {{ source('erp', 'countryregion') }}
     )
 
