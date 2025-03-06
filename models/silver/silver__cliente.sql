@@ -21,17 +21,17 @@ with
 
     , silver_cliente as (
         select
-            cliente.UID_CLIENTE
-            , CASE
-                WHEN pessoa.NOM_MEIO is null THEN pessoa.NOM_PRIMEIRO || ' ' || pessoa.NOM_ULTIMO
-                ELSE pessoa.NOM_PRIMEIRO || ' ' || pessoa.NOM_MEIO || ' ' || pessoa.NOM_ULTIMO
-            END AS NOM_COMPLETO
-            , email.DES_EMAIL
-            , telefone.NUM_TELEFONE
+            cliente.ID_CLIENTE
+            , case
+                when pessoa.NOME_MEIO is null then pessoa.NOME_PRIMEIRO || ' ' || pessoa.NOME_ULTIMO
+                else pessoa.NOME_PRIMEIRO || ' ' || pessoa.NOME_MEIO || ' ' || pessoa.NOME_ULTIMO
+            end as NOME_COMPLETO
+            , email.DESCRICAO_EMAIL
+            , telefone.NUMERO_TELEFONE
         from cliente
-        left join pessoa   on (cliente.UID_PESSOA = pessoa.UID_PESSOA)
-        left join email    on (pessoa.UID_PESSOA = email.UID_PESSOA)
-        left join telefone on (pessoa.UID_PESSOA = telefone.UID_PESSOA)
+        left join pessoa   on (cliente.ID_PESSOA = pessoa.ID_PESSOA)
+        left join email    on (pessoa.ID_PESSOA = email.ID_PESSOA)
+        left join telefone on (pessoa.ID_PESSOA = telefone.ID_PESSOA)
     )
 
 
