@@ -1,0 +1,24 @@
+models:
+  - name: dim_local
+    description: Dimensão de Local da database da Adventure Works
+    columns:
+        - name: UID_ENDERECO
+          description: Código único (chave primária) de Endereço
+          tests:
+            - unique
+            - not_null
+
+        - name: NOM_CIDADE
+          description: Nome da cidade
+
+        - name: DES_ENDERECO
+          description: Descrição completa do endereço
+
+        - name: NOM_ESTADO
+          description: Nome do estado
+
+        - name: SIG_ESTADO
+          description: Sigla do estado
+
+        - name: NOM_PAIS
+          description: Nome do país
