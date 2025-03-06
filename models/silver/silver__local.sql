@@ -1,24 +1,24 @@
 with
     endereco as (
         select *
-        from {{ ref('stg_erp__endereco') }}
+        from {{ ref('bronze_erp__endereco') }}
     )
 
     , estado as (
         select *
-        from {{ ref('stg_erp__estado') }}
+        from {{ ref('bronze_erp__estado') }}
     )
 
     , pais as (
         select *
-        from {{ ref('stg_erp__pais') }}
+        from {{ ref('bronze_erp__pais') }}
     )
 
     , silver_local as (
         select
             cast(endereco.UID_ENDERECO as int)                                            as UID_ENDERECO
-            , cast(endereco.NOM_CIDADE as string)                                         as NOM_CIDADE
             , cast(endereco.DES_ENDERECO || ' - ' || DES_COMPLEMENTO_ENDERECO as string)  as DES_ENDERECO
+            , cast(endereco.NOM_CIDADE as string)                                         as NOM_CIDADE
             , cast(estado.NOM_ESTADO as string)                                           as NOM_ESTADO
             , cast(estado.SIG_ESTADO as string)                                           as SIG_ESTADO
             , cast(pais.NOM_PAIS as string)                                               as NOM_PAIS

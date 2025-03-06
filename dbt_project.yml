@@ -38,14 +38,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   cea_adventure_works:
     # Applies to all files under models/example/
-    staging:
-      +schema: stg
+    bronze:
+      +schema: bronze
       erp:
 
-    intermediate:
-      +schema: int
+    silver:
+      +schema: silver
 
-    marts:
+    gold:
       +materialized: table
-      +schema: marts
+      +schema: gold
 
