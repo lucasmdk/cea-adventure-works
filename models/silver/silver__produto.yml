@@ -1,5 +1,5 @@
 models:
-  - name: int_comercial__prep_produto
+  - name: silver__produto
     description: Modelo que enriquece os dados de produtos ao adicionar Subcategoria e Categoria
     columns:
         - name: UID_PRODUTO
