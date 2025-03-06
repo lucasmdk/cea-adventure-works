@@ -1,17 +1,17 @@
 with
     product as (
         select *
-        from {{ ref('stg_erp__produto') }}
+        from {{ ref('bronze_erp__produto') }}
     )
 
     , subcategory as (
         select *
-        from {{ ref('stg_erp__subcategoria') }}
+        from {{ ref('bronze_erp__subcategoria') }}
     )
 
     , category as (
         select *
-        from {{ ref('stg_erp__categoria') }}
+        from {{ ref('bronze_erp__categoria') }}
     )
 
     , silver_product as (

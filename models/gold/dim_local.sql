@@ -1,7 +1,7 @@
 with
     dim_local as (
         select *
-        from {{ ref('int_comercial__prep_local') }}
+        from {{ ref('silver__local') }}
     )
 
 

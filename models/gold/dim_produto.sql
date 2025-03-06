@@ -1,7 +1,7 @@
 with
     dim_produto as (
         select *
-        from {{ ref('int_comercial__prep_produto') }}
+        from {{ ref('silver__produto') }}
     )
 
 select *
