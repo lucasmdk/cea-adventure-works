@@ -3,7 +3,7 @@ models:
     description: Modelo que enriquece os dados de motivo de venda ao adicionar Descrição e Tipo
     columns:
         - name: ID_PEDIDO
-          description: Código único (chave primária) do Pedido-Produto
+          description: Código único (chave primária) do Pedido
           tests:
             - not_null
 

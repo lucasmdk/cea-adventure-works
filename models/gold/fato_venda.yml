@@ -2,17 +2,44 @@ models:
   - name: fato_venda
     description: Fato de Venda da database da Adventure Works
     columns:
-        - name: ID_PEDIDO_DETALHE
+        - name: SK_PEDIDO_DETALHE
           description: Código único (chave primária) do Pedido-Produto
           tests:
             - unique
             - not_null
 
-        - name: ID_PEDIDO
+        - name: SK_PEDIDO
           description: Identificador (chave estrangeira) do pedido
 
-        - name: ID_PRODUTO
+        - name: SK_PRODUTO
           description: Identificador (chave estrangeira) do produto
+
+        - name: SK_CLIENTE
+          description: Identificador (chave estrangeira) do cliente
+          
+        - name: SK_ENDERECO_ENVIO
+          description: Identificador (chave estrangeira) do endereço
+
+        - name: DATA_PEDIDO
+          description: Data do pedido
+          
+        - name: DATA_ENVIO
+          description: Data do envio
+
+        - name: NUMERO_PEDIDO
+          description: Número do pedido de venda
+          
+        - name: STATUS
+          description: Status do pedido
+          
+        - name: TIPO_CARTAO_CREDITO
+          description: Tipo de cartão de crédito utilizado
+
+        - name: VALOR_BRUTO
+          description: Valor bruto de venda
+          
+        - name: VALOR_LIQUIDO
+          description: Valor líquido de venda
 
         - name: QUANTIDADE
           description: Quantidade vendida
@@ -22,30 +49,3 @@ models:
           
         - name: DESCONTO_PRECO_UNITARIO
           description: Desconto unitário do produto
-          
-        - name: ID_CLIENTE
-          description: Identificador (chave estrangeira) do cliente
-          
-        - name: ID_ENDERECO_ENVIO
-          description: Identificador (chave estrangeira) do endereço
-          
-        - name: DATA_PEDIDO
-          description: Data do pedido
-          
-        - name: DATA_ENVIO
-          description: Data do envio
-          
-        - name: NUMERO_PEDIDO
-          description: Número do pedido de venda
-          
-        - name: STATUS
-          description: Status do pedido
-          
-        - name: TIPO_CARTAO_CREDITO
-          description: Tipo de cartão de crédito do pedido
-          
-        - name: VALOR_BRUTO
-          description: Valor bruto de venda
-          
-        - name: VALOR_LIQUIDO
-          description: Valor líquido de venda

@@ -2,20 +2,17 @@ models:
   - name: dim_cliente
     description: Dimensão de Cliente da database da Adventure Works
     columns:
-        - name: UID_CLIENTE
+        - name: SK_CLIENTE
           description: Código único (chave primária) de Cliente
           tests:
             - unique
             - not_null
 
-        - name: NOM_LOJA
-          description: Nome da loja
-
-        - name: NOM_COMPLETO
+        - name: NOME_COMPLETO
           description: Nome completo do cliente
 
-        - name: NOM_ESTADO
-          description: Nome do estado
+        - name: DESCRICAO_EMAIL
+          description: E-mail do cliente
 
-        - name: TIP_CARTAO
-          description: Tipo do cartão
+        - name: NUMERO_TELEFONE
+          description: Número de telefone do cliente
