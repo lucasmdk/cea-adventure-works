@@ -1,30 +1,31 @@
 with
-    product as (
+    produto as (
         select *
         from {{ ref('bronze_erp__produto') }}
     )
 
-    , subcategory as (
+    , subcategoria as (
         select *
         from {{ ref('bronze_erp__subcategoria') }}
     )
 
-    , category as (
+    , categoria as (
         select *
         from {{ ref('bronze_erp__categoria') }}
     )
 
-    , silver_product as (
+    , silver_produto as (
         select
-            product.ID_PRODUTO
-            , product.DESCRICAO_PRODUTO
-            , product.CODIGO_PRODUTO
-            , subcategory.DESCRICAO_SUBCATEGORIA
-            , category.DESCRICAO_CATEGORIA
-        from product
-        left join subcategory on (product.ID_SUBCATEGORIA = subcategory.ID_SUBCATEGORIA)
-        left join category    on (subcategory.ID_CATEGORIA = category.ID_CATEGORIA)
+            produto.ID_PRODUTO
+            , produto.DESCRICAO_PRODUTO
+            , produto.CODIGO_PRODUTO
+            , subcategoria.DESCRICAO_SUBCATEGORIA
+            , categoria.DESCRICAO_CATEGORIA
+        from produto
+        left join subcategoria on (produto.ID_SUBCATEGORIA = subcategoria.ID_SUBCATEGORIA)
+        left join categoria    on (subcategoria.ID_CATEGORIA = categoria.ID_CATEGORIA)
     )
 
+
 select *
-from silver_product
+from silver_produto
