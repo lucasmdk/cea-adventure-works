@@ -2,6 +2,7 @@ with
     fato_venda as (
         select 
         {{ dbt_utils.generate_surrogate_key(['ID_PEDIDO_DETALHE']) }} as SK_PEDIDO_DETALHE
+        , {{ dbt_utils.generate_surrogate_key(['ID_PEDIDO']) }} as SK_PEDIDO
         , {{ dbt_utils.generate_surrogate_key(['ID_PRODUTO']) }} as SK_PRODUTO
         , {{ dbt_utils.generate_surrogate_key(['ID_CLIENTE']) }} as SK_CLIENTE
         , {{ dbt_utils.generate_surrogate_key(['ID_ENDERECO_ENVIO']) }} as SK_ENDERECO_ENVIO
@@ -9,7 +10,6 @@ with
         , DATA_ENVIO
         , NUMERO_PEDIDO
         , STATUS
-        , TIPO_MOTIVO_VENDA
         , TIPO_CARTAO_CREDITO
         , VALOR_BRUTO
         , VALOR_LIQUIDO

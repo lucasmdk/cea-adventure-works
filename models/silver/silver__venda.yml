@@ -8,6 +8,9 @@ models:
             - unique
             - not_null
 
+        - name: ID_PEDIDO
+          description: Identificador (chave estrangeira) do pedido
+
         - name: ID_PRODUTO
           description: Identificador (chave estrangeira) do produto
 
@@ -37,9 +40,6 @@ models:
           
         - name: STATUS
           description: Status do pedido
-          
-        - name: TIPO_MOTIVO_VENDA
-          description: Motivo de venda do pedido
           
         - name: TIPO_CARTAO_CREDITO
           description: Tipo de cartão de crédito do pedido
