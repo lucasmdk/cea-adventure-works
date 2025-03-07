@@ -99,7 +99,6 @@ sources:
         columns:
           - name: salesorderid
             tests:
-              - unique
               - not_null
             
       - name: salesreason

@@ -2,23 +2,23 @@ models:
   - name: silver__local
     description: Modelo que enriquece os dados de endereço ao adicionar Estado e País
     columns:
-        - name: UID_ENDERECO
+        - name: ID_ENDERECO
           description: Código único (chave primária) de Endereço
           tests:
             - unique
             - not_null
 
-        - name: NOM_CIDADE
-          description: Nome da cidade
-
-        - name: DES_ENDERECO
+        - name: DESCRICAO_ENDERECO
           description: Descrição completa do endereço
 
-        - name: NOM_ESTADO
+        - name: NOME_CIDADE
+          description: Nome da cidade
+
+        - name: NOME_ESTADO
           description: Nome do estado
 
-        - name: SIG_ESTADO
+        - name: SIGLA_ESTADO
           description: Sigla do estado
 
-        - name: NOM_PAIS
+        - name: NOME_PAIS
           description: Nome do país
