@@ -29,7 +29,14 @@ with
             , venda.DATA_PEDIDO
             , venda.DATA_ENVIO
             , venda.NUMERO_PEDIDO
-            , venda.STATUS
+            , case
+                when venda.STATUS = 1 then 'Em processo'
+                when venda.STATUS = 2 then 'Aprovado'
+                when venda.STATUS = 3 then 'Em espera'
+                when venda.STATUS = 4 then 'Rejeitado'
+                when venda.STATUS = 5 then 'Enviado'
+                else 'Cancelado'
+            end as STATUS
             , cartao_credito.TIPO_CARTAO_CREDITO
             , cast(QUANTIDADE * PRECO_UNITARIO as numeric(18,6)) as VALOR_BRUTO
             , cast(QUANTIDADE * PRECO_UNITARIO * (1 - DESCONTO_PRECO_UNITARIO) as numeric(18,6)) as VALOR_LIQUIDO
