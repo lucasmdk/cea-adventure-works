@@ -8,7 +8,7 @@ with
     venda_bruta_2011 as (
         select
             sum(VALOR_BRUTO) as VALOR_BRUTO
-        from {{ ref('silver__venda') }}
+        from {{ ref('silver__vendas') }}
         where YEAR(DATA_PEDIDO) = 2011
     )
 

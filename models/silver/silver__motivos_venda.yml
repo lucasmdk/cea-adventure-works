@@ -1,0 +1,17 @@
+models:
+  - name: silver__motivos_venda
+    description: Modelo que enriquece os dados de motivo de venda ao adicionar Descrição e Tipo
+    columns:
+        - name: ID_PEDIDO
+          description: Código único (chave primária) do Pedido
+          tests:
+            - not_null
+
+        - name: ID_MOTIVO_VENDA
+          description: Identificador (chave estrangeira) do motivo de venda
+
+        - name: DESCRICAO_MOTIVO_VENDA
+          description: Descrição do motivo de venda
+
+        - name: TIPO_MOTIVO_VENDA
+          description: Tipo do motivo de venda
