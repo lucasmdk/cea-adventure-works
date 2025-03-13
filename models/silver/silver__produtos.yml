@@ -1,0 +1,21 @@
+models:
+  - name: silver__produtos
+    description: Modelo que enriquece os dados de produtos ao adicionar Subcategoria e Categoria
+    columns:
+        - name: ID_PRODUTO
+          description: Código único (chave primária) do Produto
+          tests:
+            - unique
+            - not_null
+
+        - name: DESCRICAO_PRODUTO
+          description: Descrição do produto
+
+        - name: CODIGO_PRODUTO
+          description: Código do produto
+
+        - name: DESCRICAO_SUBCATEGORIA
+          description: Subcategoria do produto
+
+        - name: DESCRICAO_CATEGORIA
+          description: Categoria do produto
